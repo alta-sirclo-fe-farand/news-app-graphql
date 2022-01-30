@@ -1,0 +1,7 @@
+schema: "https://concrete-ocelot-10.hasura.app/v1/graphql"
+extensions:
+  endpoints:
+    default:
+      url: "https://concrete-ocelot-10.hasura.app/v1/graphql"
+      headers:
+        x-hasura-admin-secret: "jRBszFGwkrsnEZ2gKlx7THiUp4G3h9c6thYpQOeeWJHBbrCfqBPkSOMsxF4hSANc"
