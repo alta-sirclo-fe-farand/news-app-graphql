@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import client from "../../utils/apollo-client";
@@ -19,6 +20,8 @@ export async function getServerSideProps({ params }: any) {
 }
 
 export default function DetailArticle({ article }: Article) {
+  const [comment, setComment] = useState("");
+  
   return (
     <SimpleLayout>
       <Head>
@@ -36,6 +39,11 @@ export default function DetailArticle({ article }: Article) {
             <h3>{article.title}</h3>
             <p className="card-text">{article.content}</p>
             <p>{article.comments_aggregate.aggregate.count} Comments</p>
+            <form>
+              <textarea className="form-control mb-2" placeholder="Add your comment here"
+                onChange={(e) => setComment(e.target.value)}/>
+              <button type="submit" className="btn btn-primary btn-sm">Add Comment</button>
+            </form>
           </div>
         </div>
       </div>

@@ -27,6 +27,11 @@ export default function Navbar() {
                 <a className="nav-link">Home</a>
               </Link>
             </li>
+            <li className="nav-item active">
+              <Link href="/profile">
+                <a className="nav-link">Profile</a>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link href="/write">
                 <a className="nav-link">Write</a>
@@ -35,7 +40,9 @@ export default function Navbar() {
           </ul>
           <ul className="navbar-nav px-3">
             <li className="nav-item text-nowrap">
-              <Button className="nav-link">Signup</Button>
+              <Link href="/signup">
+                <Button className="nav-link">Signup</Button>
+              </Link>
             </li>
           </ul>
         </div>
